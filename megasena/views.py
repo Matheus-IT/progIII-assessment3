@@ -1,4 +1,5 @@
 from datetime import datetime
+from django.views.generic.list import ListView
 import pandas as pd
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
@@ -46,3 +47,8 @@ class UploadLotteryFileView(View):
     def convert_date(self, date: str) -> str:
         """Coverts DD/MM/YYYY to YYYY-MM-DD"""
         return datetime.strptime(date, '%d/%m/%Y').strftime('%Y-%m-%d')
+
+
+class ListLotteryRecords(ListView):
+    model = Draw
+    paginate_by = 20
