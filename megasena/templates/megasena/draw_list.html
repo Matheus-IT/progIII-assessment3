@@ -1,6 +1,26 @@
 {% extends './base.html' %}
 
+{% block javascript %}
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        const button = document.querySelector('#submit');
+        button.addEventListener('click', handle_search_submit);
+    });
+
+    function handle_search_submit(event) {
+        const search = document.querySelector('#search');
+        window.location.href = "http://localhost:8000/lottery/megasena/" + search.value;
+        console.log('success!');
+    }
+</script>
+{% endblock %}
+
 {% block content %}
+    <div class="container">
+        <input id="search" class="search" type="search" name="search">
+        <button id="submit" class="search-submit" type="submit">Search</button>
+    </div>
+
     <table class="table">
 		<thead>
             <tr>
