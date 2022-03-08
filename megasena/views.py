@@ -41,7 +41,7 @@ class UploadLotteryFileView(View):
         return redirect('admin:index')
 
     def delete_everything(self):
-        pass
+        Draw.objects.all().delete()
 
     def convert_date(self, date: str) -> str:
         """Coverts DD/MM/YYYY to YYYY-MM-DD"""
