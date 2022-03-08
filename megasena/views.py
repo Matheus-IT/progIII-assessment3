@@ -52,3 +52,8 @@ class UploadLotteryFileView(View):
 class ListLotteryRecords(ListView):
     model = Draw
     paginate_by = 20
+
+    def get_queryset(self, *args, **kwargs):
+        #  Return in reverse chronological order
+        draws = super().get_queryset(*args, **kwargs).order_by('-id')
+        return draws

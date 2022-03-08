@@ -3,3 +3,54 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+.table {
+	margin: 4em auto auto auto;
+	width: 50%;
+	font-family: 'Roboto', sans-serif;
+	color: black;
+	border-collapse: collapse;
+	box-shadow: 2px 2px 2px lightgrey;
+	border-radius: 0.4em;
+	overflow: hidden;
+}
+
+.table__head {
+	background-color: #169cd1;
+	color: #fff;
+	text-align: center;
+	font-weight: 500;
+	font-size: 1.2em;
+	padding: 0.4em;
+}
+
+.table__row:nth-child(even) {
+	background-color: #169cd1;
+	color: #fff;
+}
+
+.table__col {
+	font-size: 1em;
+	font-weight: 400;
+	padding: 0.4em;
+}
+
+.table__col-label {
+	background-color: #169cd1;
+	color: #fff;
+	font-size: 1em;
+	font-weight: 400;
+	padding: 0.4em;
+}
+
+.table__col.left {
+	text-align: left;
+}
+
+.table__col.center {
+	text-align: center;
+}
+
+.table__col.right {
+	text-align: right;
+}

@@ -1,13 +1,37 @@
 {% extends './base.html' %}
 
 {% block content %}
-    {% for draw in object_list %}
-        <ul>
-            <li>{{draw}}</li>
-        </ul>
-        {% empty %}
-        <p>Sem registros ainda...</p>
-    {% endfor %}
+    <table class="table">
+		<thead>
+            <tr>
+                <th class="table__head" colspan="8">Resultados do últimos sorteios</th>
+            </tr>
+			<tr>
+                <th class="table__col-label">Concurso</th>
+                <th class="table__col-label">Data</th>
+                <th class="table__col-label">Bola1</th>
+                <th class="table__col-label">Bola2</th>
+                <th class="table__col-label">Bola3</th>
+                <th class="table__col-label">Bola4</th>
+                <th class="table__col-label">Bola5</th>
+                <th class="table__col-label">Bola6</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for draw in object_list %}
+				<tr class="table__row">
+					<td class="table__col center">{{ draw.id }}</td>
+					<td class="table__col center">{{ draw.date }}</td>
+					<td class="table__col center">{{ draw.ball1 }}</td>
+					<td class="table__col center">{{ draw.ball2 }}</td>
+					<td class="table__col center">{{ draw.ball3 }}</td>
+					<td class="table__col center">{{ draw.ball4 }}</td>
+					<td class="table__col center">{{ draw.ball5 }}</td>
+					<td class="table__col center">{{ draw.ball6 }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 
     <div class="pagination">
         <span class="step-links">
