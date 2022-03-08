@@ -54,6 +54,6 @@ class ListLotteryRecords(ListView):
     paginate_by = 20
 
     def get_queryset(self, *args, **kwargs):
-        #  Return in reverse chronological order
+        #  Return in reverse id order
         draws = super().get_queryset(*args, **kwargs).order_by('-id')
         return draws
