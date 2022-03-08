@@ -54,3 +54,25 @@
 .table__col.right {
 	text-align: right;
 }
+
+.pagination {
+	margin: 1.4em auto;
+	width: fit-content;
+}
+
+.pagination .step-links > *:not(:last-child) {
+	margin-right: 0.4em;
+}
+
+.pagination .step-links a {
+	text-decoration: none;
+	color: rgb(24, 24, 24);
+	background-color: rgb(153, 222, 250);
+	border-radius: 0.4em;
+	padding: 0.8em;
+	transition: background-color 250ms ease;
+}
+
+.pagination .step-links a:hover {
+	background-color: rgb(109, 192, 224);
+}
