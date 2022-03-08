@@ -11,4 +11,4 @@ class Draw(models.Model):
     ball6 = models.IntegerField('Bola6')
 
     def __str__(self):
-        return f'Draw<{self.date}{self.ball1}, {self.ball2}, {self.ball3}, {self.ball4}, {self.ball5}, {self.ball6}>'
+        return f'Draw<{self.id}, {self.date}{self.ball1}, {self.ball2}, {self.ball3}, {self.ball4}, {self.ball5}, {self.ball6}>'
