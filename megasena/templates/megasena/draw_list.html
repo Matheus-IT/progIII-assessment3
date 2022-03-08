@@ -20,7 +20,9 @@
 		<tbody>
 			{% for draw in object_list %}
 				<tr class="table__row">
-					<td class="table__col center">{{ draw.id }}</td>
+					<td class="table__col center">
+                        <a href="{% url 'detail-records' draw.id %}">{{ draw.id }}</a>
+                    </td>
 					<td class="table__col center">{{ draw.date }}</td>
 					<td class="table__col center">{{ draw.ball1 }}</td>
 					<td class="table__col center">{{ draw.ball2 }}</td>

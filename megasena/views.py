@@ -1,5 +1,6 @@
 from datetime import datetime
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 import pandas as pd
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
@@ -57,3 +58,7 @@ class ListLotteryRecords(ListView):
         #  Return in reverse id order
         draws = super().get_queryset(*args, **kwargs).order_by('-id')
         return draws
+
+
+class LotteryDetailView(DetailView):
+    model = Draw

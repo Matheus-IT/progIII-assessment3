@@ -1,0 +1,44 @@
+{% extends './base.html' %}
+
+
+{% block content %}
+<div class="container">
+  <a class="go-back" href="{% url 'list-records' %}">Voltar</a>
+  <h1 class="title">Detalhes do sorteio</h1>
+
+  <table class="detail">
+    <tr>
+      <td>Concurso:</td>
+      <td>{{object.id}}</td>
+    </tr>
+    <tr>
+      <td>Data:</td>
+      <td>{{object.date}}</td>
+    </tr>
+    <tr>
+      <td>Bola1:</td>
+      <td>{{object.ball1}}</td>
+    </tr>
+    <tr>
+      <td>Bola2:</td>
+      <td>{{object.ball2}}</td>
+    </tr>
+    <tr>
+      <td>Bola3:</td>
+      <td>{{object.ball3}}</td>
+    </tr>
+    <tr>
+      <td>Bola4:</td>
+      <td>{{object.ball4}}</td>
+    </tr>
+    <tr>
+      <td>Bola5:</td>
+      <td>{{object.ball5}}</td>
+    </tr>
+    <tr>
+      <td>Bola6:</td>
+      <td>{{object.ball6}}</td>
+    </tr>
+  </table>
+</div>
+{% endblock %}

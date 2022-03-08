@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 }
 
+/* list view styles */
 .table {
 	margin: 4em auto auto auto;
 	width: 50%;
@@ -75,4 +76,32 @@
 
 .pagination .step-links a:hover {
 	background-color: rgb(109, 192, 224);
+}
+
+/* detail view styles */
+.go-back {
+	text-decoration: none;
+	color: #000;
+	position: absolute;
+	padding: 0.8em;
+	width: fit-content;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin-top: 14em;
+	border-radius: 0.4em;
+	background-color: rgb(144, 200, 223);
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: 1.6em auto;
+	padding: 1em;
+	border-radius: 0.4em;
+	width: 24em;
+	background-color: rgb(109, 192, 224);
+	color: #000;
+}
+
+.title {
+	text-align: center;
 }

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import UploadLotteryFileView, ListLotteryRecords
+from .views import LotteryDetailView, UploadLotteryFileView, ListLotteryRecords
 
 
 urlpatterns = [
@@ -9,4 +9,9 @@ urlpatterns = [
         name='upload-lottery-file',
     ),
     path('megasena/', ListLotteryRecords.as_view(), name='list-records'),
+    path(
+        'megasena/<int:pk>/',
+        LotteryDetailView.as_view(),
+        name='detail-records',
+    ),
 ]
