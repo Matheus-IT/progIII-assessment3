@@ -6,5 +6,5 @@ class UploadLotteryFile(forms.Form):
         label='Arquivo tsv', allow_empty_file=False, required=True
     )
     start_from_scratch = forms.BooleanField(
-        label='Iniciar base do zero', required=True
+        label='Iniciar base do zero', required=False
     )
